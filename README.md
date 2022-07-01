@@ -1,4 +1,4 @@
-# ofac-embargo-list ![license](https://img.shields.io/github/license/rechat/ofac-embargo-list) ![version](https://img.shields.io/github/package-json/v/rechat/ofac-embargo-list)
+# ofac-embargo-list ![license](https://img.shields.io/github/license/rechat/ofac-embargo-list) ![version](https://img.shields.io/github/package-json/v/rechat/ofac-embargo-list) ![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 
 A tool to check compliance with OFAC embargo by restricting access to certain countries, Based on MaxMind
 
