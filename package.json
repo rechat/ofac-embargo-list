@@ -1,0 +1,61 @@
+{
+  "name": "ofac-embargo-list",
+  "version": "0.0.1",
+  "description": "A tool to check compliance with OFAC embargo by restricting access to certain countries, Based on MaxMind",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint ./lib",
+    "lint:fix": "eslint ./lib --fix"
+  },
+  "keywords": [
+    "OFAC",
+    "EMBARGO",
+    "MaxMind",
+    "IP"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run types:check"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 80,
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "endOfLine": "auto"
+  },
+  "lint-staged": {
+    "**/*.(js|ts)": "eslint --fix"
+  },
+  "author": "Rechat inc.",
+  "homepage": "https://github.com/rechat/ofac-embargo-list.git",
+  "repository": "https://github.com/rechat/ofac-embargo-list.git",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "geoip-country": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/geoip-country": "^4.0.0",
+    "@types/jest": "^28.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  }
+}

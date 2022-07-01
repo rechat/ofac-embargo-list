@@ -1,0 +1,221 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "jest",
+    "prettier",
+    "@typescript-eslint"
+  ],
+
+  "rules": {
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": [
+      "error"
+    ],
+    "no-new": 0,
+    "curly": [
+      2,
+      "all"
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 85,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^import [^,]+ from"
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "camelcase": 0,
+    "new-cap": 0,
+    "strict": 0,
+    "arrow-parens": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "eol-last": 0,
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "eqeqeq": 0,
+    "no-useless-catch": 0,
+    "no-nested-ternary": 0,
+    "class-methods-use-this": 0,
+    "no-return-assign": 0,
+    "no-mixed-operators": 0,
+    "no-param-reassign": 0,
+    "no-console": 0,
+    "no-shadow": 0,
+    "consistent-return": 0,
+    "no-unused-vars": "error",
+    "prefer-const": 0,
+    "global-require": 0,
+    "no-plusplus": 0,
+    "array-callback-return": 0,
+    "no-empty": 0,
+    "default-case": 0,
+    "no-undef": 2,
+    "no-case-declarations": 0,
+    "no-useless-escape": 0,
+    "no-bitwise": 0,
+    "no-confusing-arrow": 0,
+    "no-prototype-builtins": 0,
+    "prefer-spread": 0,
+    "no-self-assign": 0,
+    "no-useless-constructor": 0,
+    "prefer-destructuring": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 80,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "endOfLine": "auto"
+      }
+    ],
+    "padding-line-between-statements": [
+      2,
+      // Always require blank lines after directive (like "use-strict"), except between directives
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "directive",
+        "next": "directive"
+      },
+      // Always require blank lines after import, except between imports
+      {
+        "blankLine": "always",
+        "prev": "import",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "import",
+        "next": "import"
+      },
+      // Always require blank lines before and after every sequence of variable declarations and export
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "const",
+          "let",
+          "var",
+          "export"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "const",
+          "let",
+          "var",
+          "export"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": [
+          "const",
+          "let",
+          "var",
+          "export"
+        ],
+        "next": [
+          "const",
+          "let",
+          "var",
+          "export"
+        ]
+      },
+      // Always require blank lines before and after class declaration, if, do/while, switch, try
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "if",
+          "class",
+          "for",
+          "do",
+          "while",
+          "switch",
+          "try"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "if",
+          "class",
+          "for",
+          "do",
+          "while",
+          "switch",
+          "try"
+        ],
+        "next": "*"
+      },
+      // Always require blank lines before return statements
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "rules": {
+        "no-unused-vars": [
+          "off"
+        ],
+        "no-undef": [
+          "off"
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          2,
+          {
+            "args": "none"
+          }
+        ]
+      }
+    }
+  ]
+}
