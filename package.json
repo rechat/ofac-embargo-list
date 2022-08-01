@@ -1,5 +1,5 @@
 {
-  "name": "ofac-embargo-list",
+  "name": "@rechat/ofac",
   "version": "0.0.1",
   "description": "A tool to check compliance with OFAC embargo by restricting access to certain countries, Based on MaxMind",
   "main": "dist/index.js",
