@@ -19,6 +19,9 @@
     "MaxMind",
     "IP"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
